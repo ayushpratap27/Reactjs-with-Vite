@@ -16,11 +16,20 @@ function App() {
     // increasing but not visible in UI), this is the reason to use hook as the changes should 
     // be visible in UI also
     // This signifies that the UI updation is controlled by React
+
+    /*setCounter(counter + 1)
+    setCounter(counter + 1)
+    setCounter(counter + 1)
+    setCounter(counter + 1)*/
+    // In the above scenario it is not going to inc. the counter by 4 because useState 
+    // send the updates of UI in batches so here as allof them is doing the same work so
+    // it is considered as a single work
     
     setCounter(prevCounter => prevCounter + 1)
-    setCounter(prevCounter => prevCounter + 1 )
     setCounter(prevCounter => prevCounter + 1)
     setCounter(prevCounter => prevCounter + 1)
+    setCounter(prevCounter => prevCounter + 1)
+    // But in this scenario it is going to increase the value by 4
     
   }
 
