@@ -10,6 +10,8 @@ function App() {
     <>
     <Chai/>
     <h1>chai aur react {username}</h1>
+    {/* {username} is a evaluated expression, 
+    username is not a javascript instead it is already evaluated */ }
     <p>test para</p>
    </>
   )
