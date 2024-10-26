@@ -11,6 +11,9 @@ function MyApp(){
     )
 }
 
+// This is not  going to run because it is created by us and react use to take it 
+// in another way
+
 // const ReactElement = {
 //     type: 'a',
 //     props: {
