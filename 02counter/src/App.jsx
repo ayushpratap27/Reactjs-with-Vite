@@ -34,7 +34,8 @@ function App() {
       <h2>Counter value: {counter}</h2>
 
       <button
-      onClick={addValue}
+      onClick={addValue} // Here we are just passing the reference(addValue) not 
+                         // addValue() because we want it to execute on click of the button
       >Add value {counter}</button> 
       <br />
       <button
