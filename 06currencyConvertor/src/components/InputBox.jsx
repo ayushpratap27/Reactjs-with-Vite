@@ -11,7 +11,11 @@ function InputBox({
     currencyDisable = false,
     className = "",
 }) {
+   // useId - useId is a react hook for generating unique IDs that can be passed to
+   // accessibility attributes.
    const amountInputId = useId()
+
+    // useId - It is a react hook for generating unique IDs that can be passed to accessibility attributes.
 
     return (
         <div className={`bg-white p-3 rounded-lg text-sm flex ${className}`}>
@@ -39,7 +43,7 @@ function InputBox({
                 >
                     
                         {currencyOptions.map((currency) => (
-                            <option key={currency} value={currency}>
+                            <option key={currency} value={currency}> {/* key is very important in react */}
                             {currency}
                             </option>
                         ))}
