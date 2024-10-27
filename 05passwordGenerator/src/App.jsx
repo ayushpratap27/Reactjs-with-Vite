@@ -8,8 +8,13 @@ function App() {
   const [charAllowed, setCharAllowed] = useState(false)
   const [password, setPassword] = useState("")
 
-  //useRef hook
+  //useRef hook - Used for taking the reference of something
   const passwordRef = useRef(null)
+
+  // useCallback hook - It is a react hook that lets you cache a function definition between re-renders
+  // useCallback(fn, dependencies) 
+  //                      |
+  //               dependency array
 
   const passwordGenerator = useCallback(() => {
     let pass = ""
@@ -34,6 +39,7 @@ function App() {
     window.navigator.clipboard.writeText(password)
   }, [password])
 
+  // useEffect hook - It is a React hook that lets you synchronize a component with an external system
   useEffect(() => {
     passwordGenerator()
   }, [length, numberAllowed, charAllowed, passwordGenerator])
